@@ -1,0 +1,43 @@
+[package]
+name = "querencia-archiv"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.92"
+description = "Querencia Archiv: klassische Archivverwaltung für Querencia Desktop"
+license = "GPL-3.0-or-later"
+publish = false
+
+[lib]
+name = "archiv"
+path = "src/lib.rs"
+
+[[bin]]
+name = "querencia-archiv"
+path = "src/main.rs"
+
+[dependencies]
+# Dieselben Bindings wie die übrigen Querencia-Programme (gtk-rs 0.11).
+gtk = { package = "gtk4", version = "0.11", features = ["v4_12"] }
+# Lesen über das System-libarchive (libarchive13t64, BSD-2-Clause):
+# Formaterkennung, alle Filter, Kennwörter für zip/7z, RAR nur lesen.
+compress-tools = "0.16"
+# Typen für die eigene Schreib-Anbindung an libarchive (schreiben/ffi.rs);
+# compress-tools zieht libc ohnehin.
+libc = "0.2"
+# Ergebnisse der Hintergrundfäden zurück in die GTK-Hauptschleife.
+futures-channel = "0.3"
+futures-util = { version = "0.3", default-features = false }
+# Übersetzungen über GNU gettext (po/, .mo unter share/locale). Feature
+# gettext-system: das gettext der glibc statt eines mitgebauten libintl.
+gettext-rs = { version = "0.8", features = ["gettext-system"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+
+[lints.rust]
+# „deny“ statt „forbid“ (wie sonst in Querencia): compress-tools kann nur
+# lesen; das Schreiben geht über eine kleine eigene libarchive-Anbindung in
+# src/schreiben/ffi.rs, dem einzigen Modul mit `#[allow(unsafe_code)]`.
+unsafe_code = "deny"
+unused_must_use = "deny"

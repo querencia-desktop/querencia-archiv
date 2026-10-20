@@ -1,0 +1,27 @@
+[Desktop Entry]
+# Querencia Archiv. Desktop-ID = GApplication-ID org.querencia.Archiv, damit
+# labwc und die Fensterliste das Fenster dieser Datei zuordnen.
+# Vorlage: Name, GenericName, Comment und Keywords sind englisch; die
+# Übersetzungen (Name[de]= …) setzt `werkzeug/i18n.py desktop` aus po/*.po
+# ein (entspricht msgfmt --desktop). Erzeugt: org.querencia.Archiv.desktop.
+# Menüname „Archive Manager“/„Archivverwaltung“ unter Zubehör wie File Roller
+# 2.30; der Fenstertitel bleibt „… – Querencia Archiv“. RAR nur lesen.
+# Symbole ohne 48x48 (GTK-4.22-Symbolregel).
+Type=Application
+Version=1.5
+Name[de]=Archivverwaltung
+Name=Archive Manager
+GenericName[de]=Archivverwaltung
+GenericName=Archive Manager
+Comment[de]=Archive erstellen und verändern
+Comment=Create and modify an archive
+Exec=querencia-archiv %F
+TryExec=querencia-archiv
+Icon=org.querencia.Archiv
+Terminal=false
+Categories=GTK;Utility;Archiving;Compression;
+MimeType=application/zip;application/x-tar;application/gzip;application/x-xz;application/x-bzip2;application/zstd;application/x-7z-compressed;application/vnd.rar;application/x-compressed-tar;application/x-xz-compressed-tar;application/x-bzip2-compressed-tar;application/x-bzip-compressed-tar;application/x-zstd-compressed-tar;application/x-zip-compressed;
+Keywords[de]=zip;tar;entpacken;auspacken;komprimieren;packen;Archiv;
+Keywords=zip;tar;extract;unpack;compress;archive;
+StartupNotify=true
+StartupWMClass=org.querencia.Archiv

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Querencia Archiv 0.1.0 (QD-019). Muster: querencia-packaging/common/metainfo
+     (SW-5); zweisprachig von Hand wie die übrigen MetaInfo-Dateien
+     (i18n-Muster §6), Metadaten unter FSFAP. -->
+<component type="desktop-application">
+  <id>org.querencia.Archiv</id>
+  <name>Querencia Archive</name>
+  <name xml:lang="de">Querencia Archiv</name>
+  <summary>Create and extract archives</summary>
+  <summary xml:lang="de">Archive erstellen und entpacken</summary>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <developer id="org.querencia">
+    <name>Querencia Desktop</name>
+    <name xml:lang="de">Querencia Desktop</name>
+  </developer>
+  <project_group>Querencia</project_group>
+  <description>
+    <p>Querencia Archive is the archive manager of Querencia Desktop. It shows the contents of an archive with a classic menu bar, a toolbar, a location bar, a folder tree beside the file list and a status bar. Files can be previewed, extracted completely or selectively with progress and cancel, and added to or deleted from zip, tar.gz and tar.xz archives.</p>
+    <p xml:lang="de">Querencia Archiv ist die Archivverwaltung von Querencia Desktop. Sie zeigt den Inhalt eines Archivs mit klassischer Menüleiste, Werkzeugleiste, Ortsleiste, Ordnerbaum neben der Dateiliste und Statusleiste. Dateien lassen sich ansehen, ganz oder ausgewählt mit Fortschritt und Abbruch entpacken und zu zip-, tar.gz- und tar.xz-Archiven hinzufügen oder daraus löschen.</p>
+    <p>Reading uses libarchive: zip (also password protected), tar with gzip, xz, bzip2 or zstd, 7z and RAR (read only). Entries with “..” or absolute paths are never extracted.</p>
+    <p xml:lang="de">Gelesen wird über libarchive: zip (auch mit Passwort), tar mit gzip, xz, bzip2 oder zstd, 7z und RAR (nur lesen). Einträge mit „..“ oder absolutem Pfad werden nie entpackt.</p>
+  </description>
+  <url type="homepage">https://querencialinux.org</url>
+  <launchable type="desktop-id">org.querencia.Archiv.desktop</launchable>
+  <provides>
+    <binary>querencia-archiv</binary>
+    <mediatype>application/zip</mediatype>
+    <mediatype>application/x-tar</mediatype>
+    <mediatype>application/gzip</mediatype>
+    <mediatype>application/x-xz</mediatype>
+    <mediatype>application/x-bzip2</mediatype>
+    <mediatype>application/zstd</mediatype>
+    <mediatype>application/x-7z-compressed</mediatype>
+    <mediatype>application/vnd.rar</mediatype>
+    <mediatype>application/x-compressed-tar</mediatype>
+    <mediatype>application/x-xz-compressed-tar</mediatype>
+  </provides>
+  <pkgname>querencia-archiv</pkgname>
+  <categories>
+    <category>Utility</category>
+    <category>Archiving</category>
+    <category>Compression</category>
+  </categories>
+  <keywords>
+    <keyword>zip</keyword>
+    <keyword>tar</keyword>
+    <keyword>archive</keyword>
+    <keyword>extract</keyword>
+    <keyword xml:lang="de">zip</keyword>
+    <keyword xml:lang="de">Archiv</keyword>
+    <keyword xml:lang="de">entpacken</keyword>
+    <keyword xml:lang="de">packen</keyword>
+  </keywords>
+  <content_rating type="oars-1.1"/>
+  <branding>
+    <color type="primary" scheme_preference="light">#F07746</color>
+    <color type="primary" scheme_preference="dark">#B8532B</color>
+  </branding>
+  <releases>
+    <release version="0.1.0" date="2026-10-20"/>
+  </releases>
+</component>

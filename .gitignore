@@ -1,0 +1,23 @@
+# Rust
+/target/
+**/*.rs.bk
+
+# Prüf- und Nachweisläufe (isolierte GUI-Prüfung): erzeugte Dateien nie einchecken.
+/nachweis/
+/gui-test/
+/laufzeit/
+/tmp/
+/werkzeug/bin/
+*.log
+__pycache__/
+
+# Vorlage der Integration: Binary und Katalog nicht ins Repo
+/integration/vorlage/querencia-archiv
+/integration/vorlage/share/
+
+# Editor
+*.orig
+*.rej
+*.swp
+*~
+/integration/vorlage/icons/
