@@ -69,7 +69,7 @@ abgebrochen, 2 = Aufruf falsch. Für Files: [docs/integration.md](docs/integrati
 | | |
 |---|---|
 | Version | 0.1.0 (Tag `archiv/0.1.0`) |
-| Letzte Prüfung | 20.10.2026: 33 Unit- und Kerntests; GUI-Szenario mit 48 Schritten und 10 Prüfpunkten je de/en × 1024×768/1920×1080 (isoliert); Messung mit 1-GB-Archiven; Probe des Integrationsskripts |
+| Letzte Prüfung | 20.10.2026: 32 Unit- und Kerntests; GUI-Szenario mit 47 Schritten und 10 Prüfpunkten je de/en × 1024×768/1920×1080 (isoliert, alle bestanden); Messung mit 1-GB-Archiven; Probe des Integrationsskripts 197/0 |
 | Bekannte Lücken | siehe [docs/testing.md](docs/testing.md), Abschnitt „Nicht getestet“ |
 | Getestet auf | Ubuntu 26.04, labwc 0.9.8, GTK 4.22, libarchive 3.8.5, Rust 1.93 |
 | Nicht getestet | andere Distributionen, HiDPI, Mehrmonitor, echte RAR-Archive, Ziehen aus Files |
