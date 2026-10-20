@@ -1,0 +1,9 @@
+# Werkstatt-Ordner, Ausnahmen vom Doku-Standard (DOKU-1, Auftrag pottrauschen 2026-10-20):
+# nachweis/ – Prüfnachweise der Entwicklungs-VM (Protokolle, Bilder, Berichte der isolierten Läufe); werden im Veröffentlichungsklon herausgefiltert (ENTSCHEIDUNGEN Nr. 9) und sind keine Projektdoku.
+nachweis/
+# gui-test/ – Wegwerfprofile der isolierten GUI-Läufe (eigenes HOME mit Testdateien); von Git ignoriert.
+gui-test/
+# laufzeit/ – Laufzeitordner (XDG_RUNTIME_DIR) der isolierten Läufe; von Git ignoriert.
+laufzeit/
+# tmp/ – Arbeitsdateien der Prüfgerüste; von Git ignoriert.
+tmp/

@@ -69,6 +69,7 @@ abgebrochen, 2 = Aufruf falsch. Für Files: [docs/integration.md](docs/integrati
 | | |
 |---|---|
 | Version | 0.1.0 (Tag `archiv/0.1.0`) |
+| Auf der Entwicklungs-VM | gebaut und geprüft, **noch nicht aktiviert** (wartet auf die Freigabe der Status-Session) |
 | Letzte Prüfung | 20.10.2026: 32 Unit- und Kerntests; GUI-Szenario mit 47 Schritten und 10 Prüfpunkten je de/en × 1024×768/1920×1080 (isoliert, alle bestanden); Messung mit 1-GB-Archiven; Probe des Integrationsskripts 197/0 |
 | Bekannte Lücken | siehe [docs/testing.md](docs/testing.md), Abschnitt „Nicht getestet“ |
 | Getestet auf | Ubuntu 26.04, labwc 0.9.8, GTK 4.22, libarchive 3.8.5, Rust 1.93 |
@@ -76,44 +77,10 @@ abgebrochen, 2 = Aufruf falsch. Für Files: [docs/integration.md](docs/integrati
 
 Änderungen: [CHANGELOG.md](CHANGELOG.md).
 
-## Bauen
+## Bauen und Prüfen
 
-Voraussetzungen (Ubuntu 26.04):
-
-```bash
-sudo apt install build-essential pkg-config rustc cargo libgtk-4-dev libarchive-dev gettext
-```
-
-```bash
-cargo build --release --locked
-```
-
-Das Ergebnis liegt unter `target/release/querencia-archiv`. Ausführliche
-Hinweise (Schreib-Anbindung, Pfade im Binary, Übersetzungen, Symbol, Paket):
-[docs/building.md](docs/building.md).
-
-## Prüfen
-
-```bash
-cargo fmt --all --check
-cargo clippy --all-targets --locked -- -D warnings
-cargo test --locked
-python3 werkzeug/i18n.py pruefen
-```
-
-Diese Befehle laufen ohne Bildschirm; die ersten drei sind auch die CI
-(`.github/workflows/ci.yml`). Die Kerntests (`tests/kern.rs`) erzeugen ihre
-Archive selbst und prüfen alle Schreibformate hin und zurück, Kennwörter,
-bösartige Archive, Konflikte, Abbruch und das Neuschreiben. Die
-**GUI-Prüfung** läuft in einer abgeschotteten Sitzung (eigener labwc ohne
-Bildschirm, eigenes `HOME` und `XDG_RUNTIME_DIR`), niemals in der laufenden
-Desktopsitzung:
-
-```bash
-bash werkzeug/lauf.sh de 1024x768
-```
-
-Fälle, Ablauf und Belege: [docs/testing.md](docs/testing.md).
+`cargo build --release --locked`, danach `cargo fmt --all --check`, `cargo clippy --all-targets --locked -- -D warnings`, `cargo test --locked` und `python3 werkzeug/i18n.py pruefen` (laufen ohne Bildschirm; die ersten drei sind die CI `.github/workflows/ci.yml`).
+Voraussetzungen (`libarchive-dev`), Schreib-Anbindung, Übersetzungen, Paket: [docs/building.md](docs/building.md); isolierte GUI-Prüfung (`bash werkzeug/lauf.sh de 1024x768`, nie in der laufenden Sitzung – Kommandozeilentests nur über `werkzeug/ohne-bildschirm.sh` mit eigenem `XDG_RUNTIME_DIR`) und Messung: [docs/testing.md](docs/testing.md); Integration: [docs/integration.md](docs/integration.md).
 
 ## Vorbild und Abgrenzung
 
