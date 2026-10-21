@@ -64,6 +64,28 @@ ARCH_FEHLER=<stelle>|signal-<stelle>`), fremde Vorwerte, fehlende
 veränderte Ablage/Vorlage, belegte Sperre. Live wird nur ohne Freigabe
 aufgerufen (Exit 2) und am Ende auf Unverändertheit verglichen.
 
+## Versionswechsel 0.1.0 → 0.1.1
+
+Archiv 0.1.1 (CSS-Welle dunkel) wird nicht mit dem Skript oben, sondern mit
+einem eigenen Wechselskript im Arbeitsordner aktiviert (Muster Dokumente
+0.1.2); Skript und Vorlage von 0.1.0 bleiben als Rückfall unverändert.
+
+```bash
+bash ~/projects/querencia-archiv-011/integration/archiv-011-integrieren.sh pruefen
+ARC011_FREIGABE=ja bash ~/projects/querencia-archiv-011/integration/archiv-011-integrieren.sh aktivieren   # nur nach Freigabe, mit der Welle
+ARC011_FREIGABE=ja bash ~/projects/querencia-archiv-011/integration/archiv-011-integrieren.sh zurueck      # → 0.1.0
+```
+
+Es ändert nur den Link `~/opt/querencia/bin/querencia-archiv` (P) und im
+Starter Exec/TryExec (D) und legt die neue Ablage an; Symbole,
+`mimeapps.list` und `mimeinfo.cache` bleiben. „alt“ heißt hier Live-Stand
+0.1.0 (Binary und Starter mit festen Prüfsummen), sonst gilt dasselbe
+Verfahren wie oben (Sperre `archiv-integrieren.lock`, Sicherung,
+Rückrollen, Journal). Probe mit umgelenkten Pfaden `ARC011_OPT`,
+`ARC011_APPS`, `ARC011_STATE` (alle oder keiner):
+`~/projects/querencia-archiv-011/werkzeug/probe.sh <leerer-ordner>`.
+Rückbau: erst dieses Skript `zurueck`, danach bei Bedarf das 0.1.0-Skript.
+
 ## Kommandozeile für Files (Auftrag A3)
 
 Querencia Archiv braucht für Files kein D-Bus; die Kontextmenü-Aktionen

@@ -67,6 +67,29 @@ neu-erstellt, cli-hier, cli-gz, cli-erstellen; dazu Katalog in
 `/proc/<pid>/maps` (de: aus der Ablage, en: keiner), keine Reste im
 Vorschauordner, Prozessende nach Strg+Q.
 
+## Dunkle Darstellung (0.1.1, CSS-Welle dunkel)
+
+Die Prüfwerkzeuge für 0.1.1 liegen im Arbeitsordner
+`~/projects/querencia-archiv-011/werkzeug/` (nicht im Repo): `lauf-011.sh
+alt|neu hell|start|wechsel|kontrast de|en <BxH>` startet einen isolierten
+Lauf wie oben, aber immer im selben Profilpfad, mit einmal erzeugten
+Testarchiven (feste Zeiten) und mit Thema, Symbolen und Schriftwerten aus
+einem Schnappschuss, damit Läufe von 0.1.0 und 0.1.1 pixelgleich
+vergleichbar sind. `hell` ist das Szenario oben plus Dateidialog „Öffnen“
+(ohne Portal, Thema 0.1); `start` und `wechsel` laufen mit einem
+Settings-Portal-Ersatz (`color-scheme` 0/1, im Lauf umschaltbar) und Thema
+0.2. `vergleich-011.py` vergleicht zwei Ergebnisordner Pixel für Pixel,
+`farbanteil.py` ordnet Fotos hell/dunkel zu, `linien-011.py` misst die drei
+eigenen Linien aus `style.css`, `kontrast-archiv.py` den Kontrast dunkel
+(WCAG AA).
+
+`style.css` hat keine festen Farben und keine `@media`-Regel (Test
+`fenster::tests::css_ohne_feste_farben_und_ohne_media`). Die Linien nehmen
+`alpha(currentColor, 0.18)` und folgen dem Thema ohne Bindung des
+CSS-Providers an `gtk-interface-color-scheme` (gemessen: hell `#d0d0cf`,
+dunkel `#595752`, beim Start wie beim Wechsel). Eine `@media`-Regel bräuchte
+diese Bindung (gemessen in Bilder 0.2.4, Dokumente 0.1.2, Software 0.1.4).
+
 ## Messung (1-GB-Archive)
 
 ```bash
