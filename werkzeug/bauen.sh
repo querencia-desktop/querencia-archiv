@@ -1,7 +1,7 @@
 #!/bin/bash
 # Querencia Archiv: fmt, Clippy, Tests und Release-Build. Übersetzt wird auf
 # einem der gemeinsamen Bau-Plätze (~/.local/state/querencia/bau-platz.sh:
-# nice 10, 4 Jobs; Regel der Startsession seit 20.10.2026) – offline, eigener
+# nice 10, 4 Jobs; Projektregel seit 20.10.2026) – offline, eigener
 # TMPDIR; die Tests selbst laufen danach außerhalb des Bau-Platzes (Regel des
 # Auftrags Archiv 0.1.0: Bau-Plätze nicht mit Testläufen belegen).
 # Der Release-Build läuft mit --remap-path-prefix (Repo → /usr/src/…,

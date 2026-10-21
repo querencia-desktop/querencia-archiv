@@ -6,7 +6,7 @@ Eingabegeräte) in einem eigenen XDG_RUNTIME_DIR, mit eigenem D-Bus
 (dbus-run-session) und eigenem XDG-Profil (Konfiguration, Daten, Cache, State).
 Wie bei Dokumente ist auch HOME umgelenkt (<profil>/home): Entpacken,
 Vorschau und Testarchive schreiben so nur ins Profil.
-Pfade kommen aus $HOME bzw. Parametern (ENTSCHEIDUNGEN Nr. 13d); den labwc
+Pfade kommen aus $HOME bzw. Parametern; den labwc
 wählt QA_LABWC (Standard $HOME/opt/labwc-0.9.8/bin/labwc). Beendet wird ausschließlich der selbst gestartete Prozessbaum
 (eigene Prozessgruppe), nie der labwc der Sitzung.
 

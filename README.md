@@ -2,8 +2,10 @@
 
 Klassische Archivverwaltung für alle, die Archive öffnen, entpacken und
 packen wollen. Teil von
-[Querencia Desktop](https://github.com/querencia-desktop/querencia) – einer
+[Querencia Desktop](https://querencialinux.org) – einer
 klassischen Desktopumgebung im GNOME-2-Stil für Wayland (labwc, Rust, GTK 4).
+Installiert wird es zusammen mit Querencia Desktop aus der APT-Quelle;
+Anleitung auf <https://querencialinux.org>.
 
 *English summary:* A classic archive manager modelled on File Roller 2.30 /
 Engrampa, reading every format libarchive knows and writing zip, tar.gz and
