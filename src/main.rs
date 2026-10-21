@@ -81,6 +81,7 @@ fn fenster_starten(argv0: OsString, dateien: Vec<OsString>) -> glib::ExitCode {
         fenster::klassische_symbole();
         resource::register();
         fenster::css_laden();
+        fenster::farbschema_anstossen();
         fenster::kuerzel(app);
         app.set_menubar(Some(&fenster::menueleiste()));
         vorschau::alte_aufraeumen();

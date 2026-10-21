@@ -473,6 +473,7 @@ pub fn ausfuehren(auftrag: Auftrag, argv0: OsString) -> glib::ExitCode {
         crate::fenster::klassische_symbole();
         crate::resource::register();
         crate::fenster::css_laden();
+        crate::fenster::farbschema_anstossen();
     });
     app.connect_activate(move |app| {
         let halt = app.hold();

@@ -47,6 +47,17 @@ pub fn css_laden() {
     }
 }
 
+/// QD-081: GTK 4.22 lädt bei „prefer-dark“ das dunkle Thema-CSS nur bei einem
+/// Wechsel im laufenden Programm; ein Start bliebe hell. Die Meldung stößt das
+/// Nachladen einmal an (hell bleibt unverändert). Die eigene CSS braucht keine
+/// Bindung an das Farbschema: Sie hat keine `@media`-Regel und nimmt Linien
+/// aus `currentColor`, das dem Thema folgt.
+pub fn farbschema_anstossen() {
+    if let Some(s) = gtk::Settings::default() {
+        s.notify("gtk-interface-color-scheme");
+    }
+}
+
 /// GNOME Human statt Adwaita, wenn der Benutzer GTKs Standard behalten hat
 /// (dieselbe Regel wie Panel, Files, Bilder und Dokumente).
 pub fn klassische_symbole() {
@@ -1924,5 +1935,29 @@ impl Fenster {
                     .await;
             }
         });
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::CSS;
+
+    #[test]
+    fn css_ohne_feste_farben_und_ohne_media() {
+        // QD-081: Grund, Schrift und Linien kommen aus dem Thema
+        // (currentColor), damit „Dunkle Darstellung bevorzugen“ alles
+        // mitnimmt. Eine @media-Regel bräuchte die Bindung des Providers an
+        // gtk-interface-color-scheme (gemessen in Bilder, Dokumente, Software).
+        let ohne_kommentare: String = CSS
+            .split("/*")
+            .map(|t| t.split_once("*/").map_or(t, |(_, r)| r))
+            .collect();
+        for muster in ["#", "rgb(", "rgba(", "@media"] {
+            assert!(
+                !ohne_kommentare.contains(muster),
+                "feste Farbe oder @media in style.css: {muster}"
+            );
+        }
+        assert_eq!(CSS.matches("alpha(currentColor, 0.18)").count(), 3);
     }
 }

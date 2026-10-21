@@ -7,6 +7,19 @@ steht als „unfertig“ da.
 
 ## [Unveröffentlicht]
 
+## [0.1.1] – 2026-10-21
+
+Dunkle Darstellung (CSS-Welle dunkel, QD-081). Hell sieht Archiv aus wie
+0.1.0.
+
+### Geändert
+- Mit „Dunkle Darstellung bevorzugen“ startet Archiv gleich dunkel, sobald
+  das Thema eine dunkle Fassung hat (ab Querencia-Klassisch 0.2); vorher
+  blieb es unter GTK 4.22 bis zum ersten Umschalten hell. Gilt auch für die
+  Fenster der Kommandozeilen-Aufträge (Entpacken aus Files).
+- Leisten und Linien folgen weiter allein dem Thema; ein Test sichert, dass
+  `style.css` keine festen Farben und keine `@media`-Regel bekommt.
+
 ## [0.1.0] – 2026-10-20
 
 Erste Alpha. Öffnen, Ansehen und Entpacken aller Formate, die libarchive
