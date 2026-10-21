@@ -16,3 +16,14 @@
 #      in Cargo.toml, src/schreiben/ffi.rs und isoliert.py sind es
 #      Fachwörter (Bindings, Feature, Remap, Locale) in deutschen Kommentaren.
 # S003 Backticks um Bezeichner in Kommentaren: Projektstil.
+#
+# Veröffentlichungsklon (ENTSCHEIDUNGEN Nr. 17, Vorlagen-Commit): GitHub erwartet
+# diese Dateien im Root bzw. unter .github/ – die einzigen Pfadeinträge, begründete
+# Ausnahmen von „keine Pfadeinträge“ (reine Vorlagen).
+MARKE.md
+CONTRIBUTING.md
+SECURITY.md
+CHANGELOG.md
+.github/pull_request_template.md
+.github/ISSUE_TEMPLATE/*.md
+werkzeug/virtual-keyboard-unstable-v1.xml

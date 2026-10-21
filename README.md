@@ -38,7 +38,7 @@ Wayland. Alpha software; documentation is in German.
   Fenster, Umbenennen im Archiv, Prüfen der Integrität
 
 Anwendungskennung (App-ID): `org.querencia.Archiv` · Binary:
-`querencia-archiv` · Debian-Paket: `querencia-archiv` (geplant, G2-F)
+`querencia-archiv` · Debian-Paket: `querencia-archiv`
 
 | Taste | Wirkung |
 |---|---|
@@ -68,9 +68,8 @@ abgebrochen, 2 = Aufruf falsch. Für Files: [docs/integration.md](docs/integrati
 
 | | |
 |---|---|
-| Version | 0.1.1 (Tag `archiv/0.1.1`, Zweig `v0.1.1`): startet unter „Dunkle Darstellung bevorzugen“ dunkel (CSS-Welle dunkel) |
-| Auf der Entwicklungs-VM | 0.1.0 live seit 20.10.2026, Standard für 14 Archivtypen; 0.1.1 nicht aktiviert, kommt mit der CSS-Welle dunkel und Thema 0.2 |
-| Letzte Prüfung | 21.10.2026 (0.1.1): 33 Unit- und Kerntests; hell gegen 0.1.0 je de/en × 1024×768/1920×1080 pixelgleich bis auf die Versionsziffer (Abweichungen von Lauf zu Lauf per Kontrolllauf 0.1.0/0.1.0 ausgewiesen); dunkel beim Start und beim Wechsel 216 Fotos wie erwartet, Kontrast AA (bis auf `label.error` des Themas, Thema-Befund); Probe des Wechselskripts 138/0. 0.1.0: Szenario mit 47 Schritten, Messung mit 1-GB-Archiven, Probe 197/0 |
+| Version | 0.1.1 (Tag `archiv/0.1.1`; startet unter „Dunkle Darstellung bevorzugen“ dunkel) |
+| Letzte Prüfung | 21.10.2026: 33 Unit- und Kerntests; isoliert hell gegen 0.1.0 und dunkel beim Start und beim Wechsel, je de/en × 1024×768/1920×1080, Kontrast WCAG AA |
 | Bekannte Lücken | siehe [docs/testing.md](docs/testing.md), Abschnitt „Nicht getestet“ |
 | Getestet auf | Ubuntu 26.04, labwc 0.9.8, GTK 4.22, libarchive 3.8.5, Rust 1.93 |
 | Nicht getestet | andere Distributionen, HiDPI, Mehrmonitor, echte RAR-Archive, Ziehen aus Files |
@@ -119,5 +118,10 @@ Abweichungen vom Vorbild und Dinge, die bewusst fehlen:
   MIT-Vermerk im Dateikopf.
 - Übersetzungen (`po/`) stehen unter derselben Lizenz wie das Programm.
 
-Name und Logo „Querencia“ sind keine freien Inhalte.
+Name und Logo „Querencia“ sind keine freien Inhalte: [MARKE.md](MARKE.md).
 
+## Fehler melden
+
+Fehler, Wünsche und Fragen zu Querencia gehen an die gemeinsame Meldestelle:
+<https://github.com/querencia-desktop/querencia/issues/new/choose>.
+Sicherheitslücken bitte nicht öffentlich melden, siehe [SECURITY.md](SECURITY.md).
