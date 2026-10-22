@@ -214,4 +214,14 @@ mod tests {
         assert_eq!(locale_dir_for(None), PathBuf::from("/usr/share/locale"));
         std::fs::remove_dir_all(&tmp).unwrap();
     }
+
+    #[test]
+    fn online_hilfe_folgt_der_sprache() {
+        // Hilfe → Online-Hilfe: die deutsche Fassung zeigt auf /de/docs/.
+        let po = include_str!("../po/de.po");
+        assert!(po.contains(
+            "msgid \"https://querencialinux.org/en/docs/\"\n\
+             msgstr \"https://querencialinux.org/de/docs/\""
+        ));
+    }
 }

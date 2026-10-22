@@ -26,6 +26,28 @@ use crate::resource;
 
 type Antwort<T> = Rc<RefCell<Option<oneshot::Sender<T>>>>;
 
+/// Website von Querencia Desktop (Info-Dialog).
+const WEBSITE: &str = "https://querencialinux.org";
+/// Neue Fehlermeldung im gemeinsamen Repo (Hilfe → Fehler melden).
+pub const FEHLER_MELDEN: &str = "https://github.com/querencia-desktop/querencia/issues/new/choose";
+
+/// Adresse der Online-Hilfe in der Sprache der Oberfläche: Die Adresse steht
+/// selbst im Katalog, gettext wählt sie wie jeden Text nach der Locale
+/// (ohne Katalog Englisch).
+pub fn online_hilfe() -> String {
+    // TRANSLATORS: Adresse der Online-Hilfe; nur das Sprachkürzel anpassen
+    // (deutsch …/de/docs/).
+    gettext("https://querencialinux.org/en/docs/")
+}
+
+/// Öffnet `uri` mit dem Standardprogramm der Sitzung (wie xdg-open).
+pub fn uri_oeffnen(eltern: &impl IsA<gtk::Window>, uri: &str) {
+    let kontext = WidgetExt::display(eltern.as_ref()).app_launch_context();
+    if let Err(e) = gio::AppInfo::launch_default_for_uri(uri, Some(&kontext)) {
+        eprintln!("querencia-archiv: {uri} nicht geöffnet: {e}");
+    }
+}
+
 fn antworten<T>(a: &Antwort<T>, wert: T) {
     if let Some(tx) = a.borrow_mut().take() {
         let _ = tx.send(wert);
@@ -793,7 +815,10 @@ impl Dialoge {
     pub fn info(&self) {
         let w = self.info.get_or_init(|| {
             let w = fenster(self.eltern(), false);
-            w.set_title(Some(&gettext_f("About {name}", &[("name", APP_NAME)])));
+            // TRANSLATORS: Fenstertitel des Info-Dialogs; deutsch mit dem
+            // Eigennamen „Querencia Archiv“, englisch mit dem Namen aus dem
+            // Anwendungsmenü.
+            w.set_title(Some(&gettext("About Archive Manager")));
             let inhalt = gtk::Box::new(gtk::Orientation::Vertical, 8);
             inhalt.set_margin_top(6);
             inhalt.set_margin_start(12);
@@ -802,18 +827,47 @@ impl Dialoge {
             img.set_pixel_size(64);
             inhalt.append(&img);
             let name = gtk::Label::new(None);
-            name.set_markup(&format!("<b><big>{APP_NAME} {}</big></b>", env!("CARGO_PKG_VERSION")));
+            // TRANSLATORS: Programmname und Version im Info-Dialog; deutsch
+            // „Querencia Archiv {version}“.
+            let titel = gettext_f(
+                "Archive Manager {version}",
+                &[("version", env!("CARGO_PKG_VERSION"))],
+            );
+            name.set_markup(&format!(
+                "<b><big>{}</big></b>",
+                glib::markup_escape_text(&titel)
+            ));
             let text = gtk::Label::new(Some(&gettext(
                 "Classic archive manager for Querencia Desktop\nmodelled on File Roller 2.30.\n\n\
-                 Reads every format libarchive knows, writes zip, tar.gz and tar.xz.\nAlpha – not released for everyday use.",
+                 Reads every format libarchive knows, writes zip, tar.gz and tar.xz.",
             )));
             text.set_justify(gtk::Justification::Center);
-            let lizenz = gtk::Label::new(Some(&gettext(
-                "License: GNU GPL, version 3 or later\nArchive formats: libarchive (BSD)",
-            )));
-            lizenz.set_justify(gtk::Justification::Center);
+            let alpha = gtk::Label::new(Some(&gettext("Alpha – not released for everyday use.")));
+            let website = gtk::Label::new(None);
+            website.set_markup(&format!("<a href=\"{WEBSITE}\">querencialinux.org</a>"));
+            // Wie die Einträge im Hilfe-Menü über GIO statt über das Portal öffnen.
+            let ww = w.downgrade();
+            website.connect_activate_link(move |_, uri| {
+                if let Some(w) = ww.upgrade() {
+                    uri_oeffnen(&w, uri);
+                }
+                glib::Propagation::Stop
+            });
+            let copyright = gtk::Label::new(Some("© 2026 Querencia Desktop contributors"));
+            copyright.add_css_class("dim-label");
+            let lizenz = gtk::Label::new(Some(&gettext("License: GPL-3.0-or-later")));
             lizenz.add_css_class("dim-label");
-            for x in [name.upcast_ref::<gtk::Widget>(), text.upcast_ref(), lizenz.upcast_ref()] {
+            let formate = gtk::Label::new(Some(&gettext("Archive formats: libarchive (BSD)")));
+            formate.add_css_class("dim-label");
+            for x in [
+                name.upcast_ref::<gtk::Widget>(),
+                text.upcast_ref(),
+                alpha.upcast_ref(),
+                website.upcast_ref(),
+                copyright.upcast_ref(),
+                lizenz.upcast_ref(),
+                formate.upcast_ref(),
+            ] {
                 inhalt.append(x);
             }
             let schliessen = knopf(&gettext("_Close"));

@@ -173,7 +173,15 @@ pub fn menueleiste() -> gio::Menu {
     );
     leiste.append_submenu(
         Some(&gettext("_Help")),
-        &menue(&[abschnitt(&[eintrag(&gettext("_About"), "win.info", None)])]),
+        &menue(&[
+            abschnitt(&[
+                // TRANSLATORS: Hilfe-Menü; Online-Hilfe und Fehlermeldung öffnen
+                // den Browser. Zugriffstasten im Menü verschieden halten.
+                eintrag(&gettext("Online _Help"), "win.online-hilfe", None),
+                eintrag(&gettext("_Report a Bug"), "win.fehler-melden", None),
+            ]),
+            abschnitt(&[eintrag(&gettext("_About"), "win.info", None)]),
+        ]),
     );
     leiste
 }
@@ -612,6 +620,12 @@ impl Fenster {
                 }
             }),
             ("anfang", |f| f.gehe_zu("", true)),
+            ("online-hilfe", |f| {
+                crate::dialoge::uri_oeffnen(&f.window, &crate::dialoge::online_hilfe())
+            }),
+            ("fehler-melden", |f| {
+                crate::dialoge::uri_oeffnen(&f.window, crate::dialoge::FEHLER_MELDEN)
+            }),
             ("info", |f| f.dialoge.info()),
             ("schliessen", |f| f.window.close()),
             ("beenden", |f| {

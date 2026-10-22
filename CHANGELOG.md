@@ -7,6 +7,20 @@ steht als „unfertig“ da.
 
 ## [Unveröffentlicht]
 
+## [0.1.2] – 2026-10-22
+
+### Neu
+- Hilfe-Menü mit „Online-Hilfe“ (querencialinux.org/de/docs/, englische
+  Oberfläche /en/docs/) und „Fehler melden“ (neue Fehlermeldung auf GitHub);
+  beides öffnet der Standardbrowser der Sitzung.
+
+### Geändert
+- Info-Dialog wie in den übrigen Querencia-Programmen: eigene Zeile „Alpha –
+  nicht für den Alltag freigegeben“, Website querencialinux.org,
+  „© 2026 Querencia Desktop contributors“, Lizenz GPL-3.0-or-later, darunter
+  weiter die libarchive-Zeile. Englisch heißt er „About Archive Manager“ (wie
+  im Anwendungsmenü), deutsch weiter „Info zu Querencia Archiv“.
+
 ## [0.1.1] – 2026-10-21
 
 Dunkle Darstellung (CSS-Welle dunkel, QD-081). Hell sieht Archiv aus wie
