@@ -68,9 +68,9 @@ abgebrochen, 2 = Aufruf falsch. Für Files: [docs/integration.md](docs/integrati
 
 | | |
 |---|---|
-| Version | 0.1.1 (Tag `archiv/0.1.1`, Zweig `v0.1.1`): startet unter „Dunkle Darstellung bevorzugen“ dunkel (CSS-Welle dunkel) |
-| Auf der Entwicklungs-VM | 0.1.0 live seit 20.10.2026, Standard für 14 Archivtypen; 0.1.1 nicht aktiviert, kommt mit der CSS-Welle dunkel und Thema 0.2 |
-| Letzte Prüfung | 21.10.2026 (0.1.1): 33 Unit- und Kerntests; hell gegen 0.1.0 je de/en × 1024×768/1920×1080 pixelgleich bis auf die Versionsziffer (Abweichungen von Lauf zu Lauf per Kontrolllauf 0.1.0/0.1.0 ausgewiesen); dunkel beim Start und beim Wechsel 216 Fotos wie erwartet, Kontrast AA (bis auf `label.error` des Themas, Thema-Befund); Probe des Wechselskripts 138/0. 0.1.0: Szenario mit 47 Schritten, Messung mit 1-GB-Archiven, Probe 197/0 |
+| Version | 0.1.2 (Tag `archiv/0.1.2`, Zweig `archiv-qd120`): Info-Dialog mit Alpha-Hinweis, Website, Copyright und Lizenz, Hilfe-Menü mit Online-Hilfe und Fehler melden |
+| Auf der Entwicklungs-VM | live seit 20.10.2026, Standard für 14 Archivtypen; 0.1.1 seit 21.10.2026, 0.1.2 wartet auf Freigabe |
+| Letzte Prüfung | 22.10.2026 (0.1.2): 34 Unit- und Kerntests, Clippy sauber, `i18n.py pruefen` PASS, `msgfmt -c` ohne Warnungen; isoliert de/en 1024×768 mit Browser-Attrappe: Online-Hilfe öffnet /de/docs/ bzw. /en/docs/, Fehler melden die GitHub-Seite (je über die Zugriffstaste), Info-Dialog mit Alpha-Hinweis, Website, Copyright und Lizenz. 21.10.2026 (0.1.1): 33 Unit- und Kerntests; hell gegen 0.1.0 je de/en × 1024×768/1920×1080 pixelgleich bis auf die Versionsziffer (Abweichungen von Lauf zu Lauf per Kontrolllauf 0.1.0/0.1.0 ausgewiesen); dunkel beim Start und beim Wechsel 216 Fotos wie erwartet, Kontrast AA (bis auf `label.error` des Themas, Thema-Befund); Probe des Wechselskripts 138/0. 0.1.0: Szenario mit 47 Schritten, Messung mit 1-GB-Archiven, Probe 197/0 |
 | Bekannte Lücken | siehe [docs/testing.md](docs/testing.md), Abschnitt „Nicht getestet“ |
 | Getestet auf | Ubuntu 26.04, labwc 0.9.8, GTK 4.22, libarchive 3.8.5, Rust 1.93 |
 | Nicht getestet | andere Distributionen, HiDPI, Mehrmonitor, echte RAR-Archive, Ziehen aus Files |
