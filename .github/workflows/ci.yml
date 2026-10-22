@@ -1,12 +1,10 @@
 # Einfache CI für Querencia-Rust-Repos: Format, Lints, Tests – ohne Bildschirm.
 # Die isolierte GUI-Prüfung (labwc, Bildschirmfotos) läuft NICHT hier, sondern
-# bei der Entwicklung (siehe docs/testing.md).
+# bei der Entwicklung (siehe CONTRIBUTING.md).
 #
-# Querencia Archiv: ENTWICKLUNGSPAKETE mit libarchive-dev (compress-tools und die
-# eigene Schreib-Anbindung), ohne gtk4-layer-shell/xkbcommon (nicht gebraucht); gzip,
-# weil ein Kerntest eine einzelne .gz-Datei mit dem Werkzeug erzeugt.
-# Erster Lauf auf GitHub beim privaten Push am 21.10.2026; die Fehler daraus
-# behebt GH-7 (Prüfbenutzer, LANG=C.UTF-8 gegen den Absturz bei Umlaut-Namen).
+# Anpassen je Repo: ENTWICKLUNGSPAKETE (Zeile unten), bei Workspaces ggf.
+# `--workspace`. Erster Lauf auf GitHub beim privaten Push am 21.10.2026; die
+# Fehler daraus behebt GH-7 (Prüfbenutzer, LANG, fehlende Werkzeuge).
 #
 # Annahmen:
 #  - Die Programme brauchen GTK 4.22 und gtk4-layer-shell/VTE (Ubuntu 26.04).

@@ -49,7 +49,7 @@ bash werkzeug/bauen.sh release    # nur Release
 ## Übersetzungen
 
 Englisch steht im Code (msgid), Deutsch in `po/de.po`. Werkzeug ist
-`werkzeug/i18n.py` aus dem Editor (G2-AC, nur Python-Standardbibliothek):
+`werkzeug/i18n.py` aus dem Editor (nur Python-Standardbibliothek):
 
 ```bash
 python3 werkzeug/i18n.py pot      # po/querencia-archiv.pot aus src/ und data/*.desktop.in
@@ -84,7 +84,7 @@ Der Unit-Test `resource::tests` schlägt fehl, solange die Ressource nicht
 zum SVG passt. Das Info-Fenster nimmt das Symbol unter eigenem Namen
 (`org.querencia.Archiv-info`) aus der Ressource.
 
-## Paket (später, G2-F)
+## Paket (später)
 
 - `/usr/bin/querencia-archiv`
 - `/usr/share/locale/de/LC_MESSAGES/querencia-archiv.mo` (aus `po/de.po`

@@ -2,8 +2,10 @@
 
 Klassische Archivverwaltung für alle, die Archive öffnen, entpacken und
 packen wollen. Teil von
-[Querencia Desktop](https://github.com/querencia-desktop/querencia) – einer
+[Querencia Desktop](https://querencialinux.org) – einer
 klassischen Desktopumgebung im GNOME-2-Stil für Wayland (labwc, Rust, GTK 4).
+Installiert wird es zusammen mit Querencia Desktop aus der APT-Quelle;
+Anleitung auf <https://querencialinux.org>.
 
 *English summary:* A classic archive manager modelled on File Roller 2.30 /
 Engrampa, reading every format libarchive knows and writing zip, tar.gz and
@@ -38,7 +40,7 @@ Wayland. Alpha software; documentation is in German.
   Fenster, Umbenennen im Archiv, Prüfen der Integrität
 
 Anwendungskennung (App-ID): `org.querencia.Archiv` · Binary:
-`querencia-archiv` · Debian-Paket: `querencia-archiv` (geplant, G2-F)
+`querencia-archiv` · Debian-Paket: `querencia-archiv`
 
 | Taste | Wirkung |
 |---|---|
@@ -68,9 +70,8 @@ abgebrochen, 2 = Aufruf falsch. Für Files: [docs/integration.md](docs/integrati
 
 | | |
 |---|---|
-| Version | 0.1.2 (Tag `archiv/0.1.2`, Zweig `archiv-qd120`): Info-Dialog mit Alpha-Hinweis, Website, Copyright und Lizenz, Hilfe-Menü mit Online-Hilfe und Fehler melden |
-| Auf der Entwicklungs-VM | live seit 20.10.2026, Standard für 14 Archivtypen; 0.1.1 seit 21.10.2026, 0.1.2 wartet auf Freigabe |
-| Letzte Prüfung | 22.10.2026 (0.1.2): 34 Unit- und Kerntests, Clippy sauber, `i18n.py pruefen` PASS, `msgfmt -c` ohne Warnungen; isoliert de/en 1024×768 mit Browser-Attrappe: Online-Hilfe öffnet /de/docs/ bzw. /en/docs/, Fehler melden die GitHub-Seite (je über die Zugriffstaste), Info-Dialog mit Alpha-Hinweis, Website, Copyright und Lizenz. 21.10.2026 (0.1.1): 33 Unit- und Kerntests; hell gegen 0.1.0 je de/en × 1024×768/1920×1080 pixelgleich bis auf die Versionsziffer (Abweichungen von Lauf zu Lauf per Kontrolllauf 0.1.0/0.1.0 ausgewiesen); dunkel beim Start und beim Wechsel 216 Fotos wie erwartet, Kontrast AA (bis auf `label.error` des Themas, Thema-Befund); Probe des Wechselskripts 138/0. 0.1.0: Szenario mit 47 Schritten, Messung mit 1-GB-Archiven, Probe 197/0 |
+| Version | 0.1.2 (Tag `archiv/0.1.2`; Info-Dialog mit Alpha-Hinweis, Website, Copyright und Lizenz, Hilfe-Menü mit Online-Hilfe und „Fehler melden“); seit 0.1.1 startet es unter „Dunkle Darstellung bevorzugen“ dunkel |
+| Letzte Prüfung | 22.10.2026 (0.1.2): 34 Unit- und Kerntests, Clippy sauber, `i18n.py pruefen` und `msgfmt -c` ohne Warnungen; isoliert de/en 1024×768: Online-Hilfe, „Fehler melden“ (je über die Zugriffstaste) und Info-Dialog. 21.10.2026 (0.1.1): 33 Unit- und Kerntests; isoliert hell gegen 0.1.0 und dunkel beim Start und beim Wechsel, je de/en × 1024×768/1920×1080, Kontrast WCAG AA |
 | Bekannte Lücken | siehe [docs/testing.md](docs/testing.md), Abschnitt „Nicht getestet“ |
 | Getestet auf | Ubuntu 26.04, labwc 0.9.8, GTK 4.22, libarchive 3.8.5, Rust 1.93 |
 | Nicht getestet | andere Distributionen, HiDPI, Mehrmonitor, echte RAR-Archive, Ziehen aus Files |
@@ -119,5 +120,10 @@ Abweichungen vom Vorbild und Dinge, die bewusst fehlen:
   MIT-Vermerk im Dateikopf.
 - Übersetzungen (`po/`) stehen unter derselben Lizenz wie das Programm.
 
-Name und Logo „Querencia“ sind keine freien Inhalte.
+Name und Logo „Querencia“ sind keine freien Inhalte: [MARKE.md](MARKE.md).
 
+## Fehler melden
+
+Fehler, Wünsche und Fragen zu Querencia gehen an die gemeinsame Meldestelle:
+<https://github.com/querencia-desktop/querencia/issues/new/choose>.
+Sicherheitslücken bitte nicht öffentlich melden, siehe [SECURITY.md](SECURITY.md).

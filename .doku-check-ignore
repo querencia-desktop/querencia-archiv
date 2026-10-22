@@ -1,5 +1,5 @@
-# Werkstatt-Ordner, Ausnahmen vom Doku-Standard (DOKU-1, Auftrag pottrauschen 2026-10-20):
-# nachweis/ – Prüfnachweise der Entwicklungs-VM (Protokolle, Bilder, Berichte der isolierten Läufe); werden im Veröffentlichungsklon herausgefiltert (ENTSCHEIDUNGEN Nr. 9) und sind keine Projektdoku.
+# Werkstatt-Ordner, Ausnahmen vom Doku-Standard (Auftrag pottrauschen 2026-10-20):
+# nachweis/ – Prüfnachweise der Entwicklungsumgebung (Protokolle, Bilder, Berichte der isolierten Läufe); werden im Veröffentlichungsklon herausgefiltert und sind keine Projektdoku.
 nachweis/
 # gui-test/ – Wegwerfprofile der isolierten GUI-Läufe (eigenes HOME mit Testdateien); von Git ignoriert.
 gui-test/
@@ -7,3 +7,10 @@ gui-test/
 laufzeit/
 # tmp/ – Arbeitsdateien der Prüfgerüste; von Git ignoriert.
 tmp/
+
+# GitHub-Dateien, begründete Ausnahme vom Doku-Standard: SECURITY.md und die
+# PR-Vorlage unter .github/ stehen dort, wo GitHub sie erwartet; MARKE.md
+# steht wie LICENSE und COPYRIGHT im Root (Vorlage aller Querencia-Repos).
+SECURITY.md
+MARKE.md
+.github/

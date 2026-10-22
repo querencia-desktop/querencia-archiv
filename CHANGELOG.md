@@ -23,7 +23,7 @@ steht als „unfertig“ da.
 
 ## [0.1.1] – 2026-10-21
 
-Dunkle Darstellung (CSS-Welle dunkel, QD-081). Hell sieht Archiv aus wie
+Dunkle Darstellung (CSS-Welle dunkel). Hell sieht Archiv aus wie
 0.1.0.
 
 ### Geändert
