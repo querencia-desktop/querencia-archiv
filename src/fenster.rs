@@ -593,7 +593,7 @@ impl Fenster {
     }
 
     fn aktionen_anlegen(self: &Rc<Self>) {
-        let aktionen: [(&str, FensterAktion); 16] = [
+        let aktionen: [(&str, FensterAktion); 18] = [
             ("neu", |f| f.neu_fragen(Vec::new())),
             ("oeffnen", |f| f.oeffnen_fragen()),
             ("entpacken", |f| f.entpacken_fragen()),
