@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Querencia Archiv 0.1.0 (QD-019). Muster: querencia-packaging/common/metainfo
+<!-- Querencia Archiv 0.1.0. Muster: querencia-packaging/common/metainfo
      (SW-5); zweisprachig von Hand wie die übrigen MetaInfo-Dateien
      (i18n-Muster §6), Metadaten unter FSFAP. -->
 <component type="desktop-application">

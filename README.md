@@ -70,8 +70,8 @@ abgebrochen, 2 = Aufruf falsch. Für Files: [docs/integration.md](docs/integrati
 
 | | |
 |---|---|
-| Version | 0.1.1 (Tag `archiv/0.1.1`; startet unter „Dunkle Darstellung bevorzugen“ dunkel) |
-| Letzte Prüfung | 21.10.2026: 33 Unit- und Kerntests; isoliert hell gegen 0.1.0 und dunkel beim Start und beim Wechsel, je de/en × 1024×768/1920×1080, Kontrast WCAG AA |
+| Version | 0.1.2 (Tag `archiv/0.1.2`; Info-Dialog mit Alpha-Hinweis, Website, Copyright und Lizenz, Hilfe-Menü mit Online-Hilfe und „Fehler melden“); seit 0.1.1 startet es unter „Dunkle Darstellung bevorzugen“ dunkel |
+| Letzte Prüfung | 22.10.2026 (0.1.2): 34 Unit- und Kerntests, Clippy sauber, `i18n.py pruefen` und `msgfmt -c` ohne Warnungen; isoliert de/en 1024×768: Online-Hilfe, „Fehler melden“ (je über die Zugriffstaste) und Info-Dialog. 21.10.2026 (0.1.1): 33 Unit- und Kerntests; isoliert hell gegen 0.1.0 und dunkel beim Start und beim Wechsel, je de/en × 1024×768/1920×1080, Kontrast WCAG AA |
 | Bekannte Lücken | siehe [docs/testing.md](docs/testing.md), Abschnitt „Nicht getestet“ |
 | Getestet auf | Ubuntu 26.04, labwc 0.9.8, GTK 4.22, libarchive 3.8.5, Rust 1.93 |
 | Nicht getestet | andere Distributionen, HiDPI, Mehrmonitor, echte RAR-Archive, Ziehen aus Files |

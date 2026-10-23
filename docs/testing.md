@@ -70,7 +70,7 @@ Vorschauordner, Prozessende nach Strg+Q.
 ## Dunkle Darstellung (0.1.1, CSS-Welle dunkel)
 
 Die Prüfwerkzeuge für 0.1.1 liegen im Arbeitsordner
-`~/projects/querencia-archiv-011/werkzeug/` (nicht im Repo): `lauf-011.sh
+der Fassung (`<arbeitsordner-011>/werkzeug/`, nicht im Repo): `lauf-011.sh
 alt|neu hell|start|wechsel|kontrast de|en <BxH>` startet einen isolierten
 Lauf wie oben, aber immer im selben Profilpfad, mit einmal erzeugten
 Testarchiven (feste Zeiten) und mit Thema, Symbolen und Schriftwerten aus
