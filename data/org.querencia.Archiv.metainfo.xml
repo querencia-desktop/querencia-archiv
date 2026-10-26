@@ -6,8 +6,14 @@
   <id>org.querencia.Archiv</id>
   <name>Querencia Archive</name>
   <name xml:lang="de">Querencia Archiv</name>
+  <name xml:lang="it">Querencia Archivio</name>
+  <name xml:lang="es">Querencia Archivador</name>
+  <name xml:lang="fr">Querencia Archive</name>
   <summary>Create and extract archives</summary>
   <summary xml:lang="de">Archive erstellen und entpacken</summary>
+  <summary xml:lang="it">Crea ed estrae archivi</summary>
+  <summary xml:lang="es">Crear y extraer archivadores</summary>
+  <summary xml:lang="fr">Créer et extraire des archives</summary>
   <metadata_license>FSFAP</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <developer id="org.querencia">
@@ -18,8 +24,14 @@
   <description>
     <p>Querencia Archive is the archive manager of Querencia Desktop. It shows the contents of an archive with a classic menu bar, a toolbar, a location bar, a folder tree beside the file list and a status bar. Files can be previewed, extracted completely or selectively with progress and cancel, and added to or deleted from zip, tar.gz and tar.xz archives.</p>
     <p xml:lang="de">Querencia Archiv ist die Archivverwaltung von Querencia Desktop. Sie zeigt den Inhalt eines Archivs mit klassischer Menüleiste, Werkzeugleiste, Ortsleiste, Ordnerbaum neben der Dateiliste und Statusleiste. Dateien lassen sich ansehen, ganz oder ausgewählt mit Fortschritt und Abbruch entpacken und zu zip-, tar.gz- und tar.xz-Archiven hinzufügen oder daraus löschen.</p>
+    <p xml:lang="it">Querencia Archivio è il gestore di archivi di Querencia Desktop. Mostra il contenuto di un archivio con una classica barra dei menu, una barra degli strumenti, una barra della posizione, un albero delle cartelle accanto all’elenco dei file e una barra di stato. I file si possono visualizzare, estrarre del tutto o in parte con avanzamento e annullamento, e aggiungere o eliminare negli archivi zip, tar.gz e tar.xz.</p>
+    <p xml:lang="es">Querencia Archivador es el gestor de archivadores de Querencia Desktop. Muestra el contenido de un archivador con una barra de menús clásica, una barra de herramientas, una barra de ubicación, un árbol de carpetas junto a la lista de archivos y una barra de estado. Los archivos se pueden previsualizar, extraer por completo o de forma selectiva con progreso y cancelación, y añadir o eliminar en archivadores zip, tar.gz y tar.xz.</p>
+    <p xml:lang="fr">Querencia Archive est le gestionnaire d’archives de Querencia Desktop. Il affiche le contenu d’une archive avec une barre de menus classique, une barre d’outils, une barre d’emplacement, une arborescence des dossiers à côté de la liste des fichiers et une barre d’état. Les fichiers peuvent être prévisualisés, extraits entièrement ou en partie avec progression et annulation, et ajoutés à des archives zip, tar.gz et tar.xz ou supprimés de celles-ci.</p>
     <p>Reading uses libarchive: zip (also password protected), tar with gzip, xz, bzip2 or zstd, 7z and RAR (read only). Entries with “..” or absolute paths are never extracted.</p>
     <p xml:lang="de">Gelesen wird über libarchive: zip (auch mit Passwort), tar mit gzip, xz, bzip2 oder zstd, 7z und RAR (nur lesen). Einträge mit „..“ oder absolutem Pfad werden nie entpackt.</p>
+    <p xml:lang="it">La lettura usa libarchive: zip (anche protetti da password), tar con gzip, xz, bzip2 o zstd, 7z e RAR (sola lettura). Le voci con «..» o percorsi assoluti non vengono mai estratte.</p>
+    <p xml:lang="es">La lectura usa libarchive: zip (también con contraseña), tar con gzip, xz, bzip2 o zstd, 7z y RAR (solo lectura). Las entradas con «..» o rutas absolutas nunca se extraen.</p>
+    <p xml:lang="fr">La lecture passe par libarchive : zip (y compris protégé par mot de passe), tar avec gzip, xz, bzip2 ou zstd, 7z et RAR (lecture seule). Les entrées avec « .. » ou un chemin absolu ne sont jamais extraites.</p>
   </description>
   <url type="homepage">https://querencialinux.org</url>
   <launchable type="desktop-id">org.querencia.Archiv.desktop</launchable>
@@ -51,6 +63,18 @@
     <keyword xml:lang="de">Archiv</keyword>
     <keyword xml:lang="de">entpacken</keyword>
     <keyword xml:lang="de">packen</keyword>
+    <keyword xml:lang="it">zip</keyword>
+    <keyword xml:lang="it">archivio</keyword>
+    <keyword xml:lang="it">estrai</keyword>
+    <keyword xml:lang="it">comprimi</keyword>
+    <keyword xml:lang="es">zip</keyword>
+    <keyword xml:lang="es">archivador</keyword>
+    <keyword xml:lang="es">extraer</keyword>
+    <keyword xml:lang="es">comprimir</keyword>
+    <keyword xml:lang="fr">zip</keyword>
+    <keyword xml:lang="fr">archive</keyword>
+    <keyword xml:lang="fr">extraire</keyword>
+    <keyword xml:lang="fr">compresser</keyword>
   </keywords>
   <content_rating type="oars-1.1"/>
   <branding>
