@@ -1,0 +1,670 @@
+# Querencia Archiv: französische Übersetzung.
+# Copyright (C) 2026 Querencia Desktop contributors
+# Diese Datei steht unter derselben Lizenz wie Querencia Archiv (GPL-3.0-or-later).
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: querencia-archiv\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2026-10-26 23:08+0100\n"
+"Last-Translator: Querencia Desktop contributors\n"
+"Language-Team: Français (Querencia)\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. TRANSLATORS: Desktop-Datei, Schlüssel Name
+#. TRANSLATORS: Desktop-Datei, Schlüssel GenericName
+#: data/org.querencia.Archiv.desktop.in:12 data/org.querencia.Archiv.desktop.in:13
+msgid "Archive Manager"
+msgstr "Gestionnaire d’archives"
+
+#. TRANSLATORS: Desktop-Datei, Schlüssel Comment
+#: data/org.querencia.Archiv.desktop.in:14
+msgid "Create and modify an archive"
+msgstr "Créer et modifier une archive"
+
+#. TRANSLATORS: Desktop-Datei, Schlüssel Keywords (Liste, Einträge mit ; trennen und abschließen)
+#: data/org.querencia.Archiv.desktop.in:21
+msgid "zip;tar;extract;unpack;compress;archive;"
+msgstr "zip;tar;extraire;décompresser;compresser;archive;"
+
+#. TRANSLATORS: Dateigröße unter 1 KB
+#: src/anzeige.rs:17 src/i18n.rs:159 src/i18n.rs:160
+#, no-c-format
+msgid "{n} byte"
+msgid_plural "{n} bytes"
+msgstr[0] "{n} octet"
+msgstr[1] "{n} octets"
+
+#. TRANSLATORS: Spalte „Date Modified“, Format von g_date_time_format
+#: src/anzeige.rs:42
+msgid "%Y-%m-%d %H:%M"
+msgstr "%d/%m/%Y %H:%M"
+
+#. TRANSLATORS: Adresse der Online-Hilfe; nur das Sprachkürzel anpassen (deutsch …/de/docs/).
+#: src/dialoge.rs:40
+msgid "https://querencialinux.org/en/docs/"
+msgstr "https://querencialinux.org/fr/docs/"
+
+#: src/dialoge.rs:189 src/dialoge.rs:407 src/dialoge.rs:470 src/dialoge.rs:549 src/dialoge.rs:652 src/dialoge.rs:749
+msgid "_Cancel"
+msgstr "_Annuler"
+
+#: src/dialoge.rs:222
+msgid "Cancelling…"
+msgstr "Annulation…"
+
+#. TRANSLATORS: Fortschrittsbalken, z. B. „12.5 MB of 1.0 GB“
+#: src/dialoge.rs:243
+#, no-c-format
+msgid "{done} of {total}"
+msgstr "{done} sur {total}"
+
+#: src/dialoge.rs:372 src/dialoge.rs:873
+msgid "_Close"
+msgstr "_Fermer"
+
+#: src/dialoge.rs:390
+msgid "Error"
+msgstr "Erreur"
+
+#: src/dialoge.rs:434
+msgid "Password Required"
+msgstr "Mot de passe requis"
+
+#: src/dialoge.rs:438
+msgid "This archive is encrypted"
+msgstr "Cette archive est chiffrée"
+
+#: src/dialoge.rs:450
+msgid "_Password:"
+msgstr "_Mot de passe :"
+
+#: src/dialoge.rs:471
+msgid "_OK"
+msgstr "_Valider"
+
+#: src/dialoge.rs:508
+#, no-c-format
+msgid "Enter the password for “{name}”."
+msgstr "Saisissez le mot de passe de « {name} »."
+
+#: src/dialoge.rs:513
+msgid "Incorrect password. Please try again."
+msgstr "Mot de passe incorrect. Veuillez réessayer."
+
+#: src/dialoge.rs:529
+msgid "File Already Exists"
+msgstr "Le fichier existe déjà"
+
+#: src/dialoge.rs:538
+msgid "_Apply this action to all files"
+msgstr "Appliquer à _tous les fichiers"
+
+#: src/dialoge.rs:550
+msgid "_Skip"
+msgstr "_Ignorer"
+
+#: src/dialoge.rs:551
+msgid "_Replace"
+msgstr "_Remplacer"
+
+#: src/dialoge.rs:599
+#, no-c-format
+msgid "A file named “{name}” already exists."
+msgstr "Un fichier nommé « {name} » existe déjà."
+
+#: src/dialoge.rs:604
+#, no-c-format
+msgid "Replacing it will overwrite its contents in “{folder}”."
+msgstr "Le remplacer écrasera son contenu dans « {folder} »."
+
+#: src/dialoge.rs:624 src/dialoge.rs:661 src/fenster.rs:320
+msgid "Extract"
+msgstr "Extraire"
+
+#: src/dialoge.rs:629 src/dialoge.rs:729
+msgid "_Browse…"
+msgstr "_Parcourir…"
+
+#: src/dialoge.rs:633
+msgid "Extract _to:"
+msgstr "Extraire _vers :"
+
+#: src/dialoge.rs:639
+msgid "Files"
+msgstr "Fichiers"
+
+#: src/dialoge.rs:643
+msgid "_All files"
+msgstr "_Tous les fichiers"
+
+#: src/dialoge.rs:644
+msgid "_Selected files"
+msgstr "Fichiers _sélectionnés"
+
+#: src/dialoge.rs:653
+msgid "_Extract"
+msgstr "_Extraire"
+
+#. TRANSLATORS: Vorschlag für den Namen eines neuen Archivs
+#: src/dialoge.rs:722 src/dialoge.rs:758 src/fenster.rs:1330
+msgid "New Archive"
+msgstr "Nouvelle archive"
+
+#: src/dialoge.rs:736
+msgid "_Name:"
+msgstr "_Nom :"
+
+#: src/dialoge.rs:738 src/fenster.rs:352
+msgid "_Location:"
+msgstr "E_mplacement :"
+
+#: src/dialoge.rs:742
+msgid "Archive _type:"
+msgstr "_Type d’archive :"
+
+#: src/dialoge.rs:750
+msgid "C_reate"
+msgstr "C_réer"
+
+#. TRANSLATORS: Fenstertitel des Info-Dialogs; deutsch mit dem Eigennamen „Querencia Archiv“, englisch mit dem Namen aus dem Anwendungsmenü.
+#: src/dialoge.rs:821
+msgid "About Archive Manager"
+msgstr "À propos de Gestionnaire d’archives"
+
+#. TRANSLATORS: Programmname und Version im Info-Dialog; deutsch „Querencia Archiv {version}“.
+#: src/dialoge.rs:832
+#, no-c-format
+msgid "Archive Manager {version}"
+msgstr "Gestionnaire d’archives {version}"
+
+#: src/dialoge.rs:840
+msgid ""
+"Classic archive manager for Querencia Desktop\n"
+"modelled on File Roller 2.30.\n"
+"\n"
+"Reads every format libarchive knows, writes zip, tar.gz and tar.xz."
+msgstr ""
+"Gestionnaire d’archives classique pour Querencia Desktop\n"
+"inspiré de File Roller 2.30.\n"
+"\n"
+"Lit tous les formats connus de libarchive, écrit zip, tar.gz et tar.xz."
+
+#: src/dialoge.rs:845
+msgid "Alpha – not released for everyday use."
+msgstr "Alpha – pas encore prête pour un usage quotidien."
+
+#: src/dialoge.rs:858
+msgid "License: GPL-3.0-or-later"
+msgstr "Licence : GPL-3.0-or-later"
+
+#: src/dialoge.rs:860
+msgid "Archive formats: libarchive (BSD)"
+msgstr "Formats d’archive : libarchive (BSD)"
+
+#: src/fenster.rs:127
+msgid "_Archive"
+msgstr "_Archive"
+
+#: src/fenster.rs:130
+msgid "_New…"
+msgstr "_Nouveau…"
+
+#: src/fenster.rs:131
+msgid "_Open…"
+msgstr "_Ouvrir…"
+
+#: src/fenster.rs:133
+msgid "_Extract…"
+msgstr "_Extraire…"
+
+#. TRANSLATORS: Menü „Archiv“; Knöpfe in Dialogen nehmen „_Close“ ohne Kontext
+#: src/fenster.rs:136
+msgctxt "Archive menu"
+msgid "_Close"
+msgstr "_Fermer"
+
+#: src/fenster.rs:137
+msgid "_Quit"
+msgstr "_Quitter"
+
+#: src/fenster.rs:142
+msgid "_Edit"
+msgstr "É_dition"
+
+#: src/fenster.rs:145
+msgid "_Add Files…"
+msgstr "_Ajouter des fichiers…"
+
+#: src/fenster.rs:146
+msgid "Add a _Folder…"
+msgstr "Ajouter un d_ossier…"
+
+#: src/fenster.rs:147 src/fenster.rs:1610
+msgid "_Delete"
+msgstr "_Supprimer"
+
+#: src/fenster.rs:151
+msgid "_Select All"
+msgstr "_Tout sélectionner"
+
+#: src/fenster.rs:156
+msgid "D_eselect All"
+msgstr "Tout _désélectionner"
+
+#: src/fenster.rs:164
+msgid "_View"
+msgstr "A_ffichage"
+
+#: src/fenster.rs:167
+msgid "_Toolbar"
+msgstr "_Barre d’outils"
+
+#: src/fenster.rs:168
+msgid "_Statusbar"
+msgstr "Barre d’é_tat"
+
+#: src/fenster.rs:169
+msgid "_Folders"
+msgstr "_Dossiers"
+
+#: src/fenster.rs:171
+msgid "_Reload"
+msgstr "_Recharger"
+
+#: src/fenster.rs:175
+msgid "_Help"
+msgstr "Aid_e"
+
+#. TRANSLATORS: Hilfe-Menü; Online-Hilfe und Fehlermeldung öffnen den Browser. Zugriffstasten im Menü verschieden halten.
+#: src/fenster.rs:180
+msgid "Online _Help"
+msgstr "_Aide en ligne"
+
+#: src/fenster.rs:181
+msgid "_Report a Bug"
+msgstr "_Signaler un bogue"
+
+#: src/fenster.rs:183
+msgid "_About"
+msgstr "À _propos"
+
+#. TRANSLATORS: Werkzeugleiste, kurz
+#: src/fenster.rs:307
+msgid "New"
+msgstr "Nouveau"
+
+#: src/fenster.rs:308
+msgid "Create a new archive"
+msgstr "Créer une nouvelle archive"
+
+#: src/fenster.rs:313 src/fenster.rs:1103
+msgid "Open"
+msgstr "Ouvrir"
+
+#: src/fenster.rs:314
+msgid "Open archive"
+msgstr "Ouvrir une archive"
+
+#: src/fenster.rs:321
+msgid "Extract files from the archive"
+msgstr "Extraire des fichiers de l’archive"
+
+#: src/fenster.rs:326
+msgid "Add"
+msgstr "Ajouter"
+
+#: src/fenster.rs:327
+msgid "Add files to the archive"
+msgstr "Ajouter des fichiers à l’archive"
+
+#: src/fenster.rs:336
+msgid "Go to the previous visited location"
+msgstr "Aller à l’emplacement précédent"
+
+#: src/fenster.rs:341
+msgid "Go to the next visited location"
+msgstr "Aller à l’emplacement suivant"
+
+#: src/fenster.rs:344
+msgid "Go up one level"
+msgstr "Remonter d’un niveau"
+
+#: src/fenster.rs:347
+msgid "Go to the home location"
+msgstr "Aller au début de l’archive"
+
+#. TRANSLATORS: leeres Fenster; Menüpfad und Kürzel wie in der Oberfläche
+#: src/fenster.rs:434
+msgid ""
+"No archive open.\n"
+"\n"
+"Archive → Open… (Ctrl+O), Archive → New… (Ctrl+N)\n"
+"or drop files here."
+msgstr ""
+"Aucune archive ouverte.\n"
+"\n"
+"Archive → Ouvrir… (Ctrl+O), Archive → Nouveau… (Ctrl+N)\n"
+"ou déposez des fichiers ici."
+
+#: src/fenster.rs:547
+msgid "Name"
+msgstr "Nom"
+
+#: src/fenster.rs:557
+msgid "Size"
+msgstr "Taille"
+
+#: src/fenster.rs:571
+msgid "Type"
+msgstr "Type"
+
+#: src/fenster.rs:581
+msgid "Date Modified"
+msgstr "Date de modification"
+
+#: src/fenster.rs:897
+#, no-c-format
+msgid "{n} object ({size})"
+msgid_plural "{n} objects ({size})"
+msgstr[0] "{n} objet ({size})"
+msgstr[1] "{n} objets ({size})"
+
+#: src/fenster.rs:912
+#, no-c-format
+msgid "{n} object selected ({size})"
+msgid_plural "{n} objects selected ({size})"
+msgstr[0] "{n} objet sélectionné ({size})"
+msgstr[1] "{n} objets sélectionnés ({size})"
+
+#: src/fenster.rs:921
+#, no-c-format
+msgid "Warning: {n} entry with an unsafe path is not extracted"
+msgid_plural "Warning: {n} entries with unsafe paths are not extracted"
+msgstr[0] "Avertissement : {n} entrée avec un chemin non sûr n’est pas extraite"
+msgstr[1] ""
+"Avertissement : {n} entrées avec des chemins non sûrs ne sont pas extraites"
+
+#: src/fenster.rs:929
+#, no-c-format
+msgid "{format} (read only)"
+msgstr "{format} (lecture seule)"
+
+#: src/fenster.rs:1107
+msgid "All archives"
+msgstr "Toutes les archives"
+
+#: src/fenster.rs:1112
+msgid "All files"
+msgstr "Tous les fichiers"
+
+#: src/fenster.rs:1198 src/kommandozeile.rs:198
+msgid "Opening Archive"
+msgstr "Ouverture de l’archive"
+
+#: src/fenster.rs:1199 src/kommandozeile.rs:199
+#, no-c-format
+msgid "Reading “{name}”"
+msgstr "Lecture de « {name} »"
+
+#: src/fenster.rs:1244 src/fenster.rs:1280 src/kommandozeile.rs:226
+#, no-c-format
+msgid "Could not open “{name}”."
+msgstr "Impossible d’ouvrir « {name} »."
+
+#: src/fenster.rs:1245 src/fenster.rs:1826
+msgid "Internal error."
+msgstr "Erreur interne."
+
+#: src/fenster.rs:1282 src/kommandozeile.rs:215
+msgid "Archive type not supported."
+msgstr "Type d’archive non pris en charge."
+
+#: src/fenster.rs:1283 src/kommandozeile.rs:216
+#, no-c-format
+msgid ""
+"The file could not be read.\n"
+"\n"
+"Details: {detail}"
+msgstr ""
+"Impossible de lire le fichier.\n"
+"\n"
+"Détails : {detail}"
+
+#: src/fenster.rs:1287 src/fenster.rs:1879 src/kommandozeile.rs:220 src/kommandozeile.rs:351
+#, no-c-format
+msgid ""
+"The archive is damaged or cannot be read.\n"
+"\n"
+"Details: {detail}"
+msgstr ""
+"L’archive est endommagée ou illisible.\n"
+"\n"
+"Détails : {detail}"
+
+#: src/fenster.rs:1291
+msgid "The archive is encrypted."
+msgstr "L’archive est chiffrée."
+
+#: src/fenster.rs:1342 src/kommandozeile.rs:370
+#, no-c-format
+msgid "Could not create “{name}”."
+msgstr "Impossible de créer « {name} »."
+
+#: src/fenster.rs:1343 src/kommandozeile.rs:382
+msgid "A file with this name already exists. Choose another name."
+msgstr "Un fichier portant ce nom existe déjà. Choisissez un autre nom."
+
+#: src/fenster.rs:1351
+msgid "Could not create the archive."
+msgstr "Impossible de créer l’archive."
+
+#: src/fenster.rs:1352 src/kommandozeile.rs:392
+msgid "The folder does not exist."
+msgstr "Le dossier n’existe pas."
+
+#: src/fenster.rs:1392
+msgid "Add a Folder"
+msgstr "Ajouter un dossier"
+
+#: src/fenster.rs:1394
+msgid "Add Files"
+msgstr "Ajouter des fichiers"
+
+#: src/fenster.rs:1451
+#, no-c-format
+msgid "Querencia Archiv can only read {format} archives."
+msgstr "Querencia Archiv ne peut que lire les archives {format}."
+
+#: src/fenster.rs:1456
+msgid ""
+"The archive contains links, special files or unsafe paths that would be lost when it is rewritten."
+msgstr ""
+"L’archive contient des liens, des fichiers spéciaux ou des chemins non sûrs qui seraient perdus lors de sa réécriture."
+
+#: src/fenster.rs:1460 src/fenster.rs:1569
+msgid "Encrypted archives cannot be changed yet."
+msgstr "Les archives chiffrées ne peuvent pas encore être modifiées."
+
+#: src/fenster.rs:1468 src/fenster.rs:1574
+msgid "The archive cannot be changed."
+msgstr "L’archive ne peut pas être modifiée."
+
+#: src/fenster.rs:1505 src/kommandozeile.rs:402
+msgid "Adding Files"
+msgstr "Ajout des fichiers"
+
+#: src/fenster.rs:1506 src/kommandozeile.rs:403
+#, no-c-format
+msgid "Adding files to “{name}”"
+msgstr "Ajout des fichiers à « {name} »"
+
+#: src/fenster.rs:1536
+#, no-c-format
+msgid "{n} link or special file was skipped"
+msgid_plural "{n} links or special files were skipped"
+msgstr[0] "{n} lien ou fichier spécial a été ignoré"
+msgstr[1] "{n} liens ou fichiers spéciaux ont été ignorés"
+
+#: src/fenster.rs:1551 src/kommandozeile.rs:418
+#, no-c-format
+msgid ""
+"“{file}” could not be read.\n"
+"\n"
+"Details: {detail}"
+msgstr ""
+"Impossible de lire « {file} ».\n"
+"\n"
+"Détails : {detail}"
+
+#: src/fenster.rs:1558 src/fenster.rs:1872 src/kommandozeile.rs:344 src/kommandozeile.rs:425
+#, no-c-format
+msgid ""
+"“{file}” could not be written.\n"
+"\n"
+"Details: {detail}"
+msgstr ""
+"Impossible d’écrire « {file} ».\n"
+"\n"
+"Détails : {detail}"
+
+#: src/fenster.rs:1566 src/fenster.rs:1572 src/fenster.rs:1947 src/kommandozeile.rs:432
+#, no-c-format
+msgid "Details: {detail}"
+msgstr "Détails : {detail}"
+
+#: src/fenster.rs:1578
+#, no-c-format
+msgid "Could not update “{name}”."
+msgstr "Impossible de mettre à jour « {name} »."
+
+#: src/fenster.rs:1603
+#, no-c-format
+msgid "Delete the selected object from the archive?"
+msgid_plural "Delete the {n} selected objects from the archive?"
+msgstr[0] "Supprimer l’objet sélectionné de l’archive ?"
+msgstr[1] "Supprimer les {n} objets sélectionnés de l’archive ?"
+
+#: src/fenster.rs:1609
+msgid "The archive is rewritten without them. This cannot be undone."
+msgstr "L’archive est réécrite sans eux. Cette opération est irréversible."
+
+#: src/fenster.rs:1638
+msgid "Deleting Files"
+msgstr "Suppression des fichiers"
+
+#: src/fenster.rs:1639
+#, no-c-format
+msgid "Deleting files from “{name}”"
+msgstr "Suppression des fichiers de « {name} »"
+
+#: src/fenster.rs:1707 src/kommandozeile.rs:262
+msgid "Extraction not performed"
+msgstr "Extraction non effectuée"
+
+#: src/fenster.rs:1708 src/kommandozeile.rs:263
+#, no-c-format
+msgid ""
+"The folder “{folder}” could not be created.\n"
+"\n"
+"Details: {detail}"
+msgstr ""
+"Impossible de créer le dossier « {folder} ».\n"
+"\n"
+"Détails : {detail}"
+
+#: src/fenster.rs:1720
+#, no-c-format
+msgid "{n} file extracted to “{folder}”"
+msgid_plural "{n} files extracted to “{folder}”"
+msgstr[0] "{n} fichier extrait dans « {folder} »"
+msgstr[1] "{n} fichiers extraits dans « {folder} »"
+
+#: src/fenster.rs:1727
+#, no-c-format
+msgid "{n} skipped"
+msgid_plural "{n} skipped"
+msgstr[0] "{n} ignoré"
+msgstr[1] "{n} ignorés"
+
+#: src/fenster.rs:1735 src/kommandozeile.rs:322
+#, no-c-format
+msgid "{n} link or special file not created"
+msgid_plural "{n} links or special files not created"
+msgstr[0] "{n} lien ou fichier spécial non créé"
+msgstr[1] "{n} liens ou fichiers spéciaux non créés"
+
+#: src/fenster.rs:1755 src/kommandozeile.rs:246
+msgid "Extraction refused"
+msgstr "Extraction refusée"
+
+#: src/fenster.rs:1756 src/kommandozeile.rs:247
+#, no-c-format
+msgid ""
+"The archive contains entries with unsafe paths (“..” or absolute). Nothing was extracted.\n"
+"\n"
+"{names}"
+msgstr ""
+"L’archive contient des entrées avec des chemins non sûrs (« .. » ou absolus). Rien n’a été extrait.\n"
+"\n"
+"{names}"
+
+#: src/fenster.rs:1798 src/kommandozeile.rs:290
+msgid "Extracting Files"
+msgstr "Extraction des fichiers"
+
+#: src/fenster.rs:1799 src/kommandozeile.rs:291
+#, no-c-format
+msgid "Extracting files from “{name}”"
+msgstr "Extraction des fichiers de « {name} »"
+
+#: src/fenster.rs:1825 src/fenster.rs:1887 src/kommandozeile.rs:358
+msgid "An error occurred while extracting files."
+msgstr "Une erreur s’est produite lors de l’extraction des fichiers."
+
+#: src/fenster.rs:1930
+msgid "Could not display the file."
+msgstr "Impossible d’afficher le fichier."
+
+#: src/fenster.rs:1931
+msgid "No temporary folder."
+msgstr "Aucun dossier temporaire."
+
+#: src/fenster.rs:1946
+#, no-c-format
+msgid "Could not display “{name}”."
+msgstr "Impossible d’afficher « {name} »."
+
+#. TRANSLATORS: Dezimalzeichen in Dateigrößen („2.9 MB“)
+#: src/i18n.rs:79
+msgctxt "decimal separator"
+msgid "."
+msgstr ","
+
+#: src/kommandozeile.rs:374
+msgid "Supported archive types for new archives: .zip, .tar.gz, .tar.xz."
+msgstr ""
+"Types pris en charge pour les nouvelles archives : .zip, .tar.gz, .tar.xz."
+
+#: src/zeile.rs:96
+msgid "Folder"
+msgstr "Dossier"
+
+#: src/zeile.rs:115
+msgid "Unsafe path – not extracted"
+msgstr "Chemin non sûr – non extrait"
+
+#. TRANSLATORS: Spalte „Typ“; Querencia Archiv legt Verknüpfungen nicht an
+#: src/zeile.rs:122
+msgid "Link – not extracted"
+msgstr "Lien – non créé"
+
+#. TRANSLATORS: Spalte „Typ“ für Geräte- und Sonderdateien
+#: src/zeile.rs:127
+msgid "Special file – not extracted"
+msgstr "Fichier spécial – non créé"

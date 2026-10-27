@@ -65,7 +65,7 @@ msgstr ""
 msgid "{done} of {total}"
 msgstr ""
 
-#: src/dialoge.rs:372 src/dialoge.rs:867
+#: src/dialoge.rs:372 src/dialoge.rs:873
 msgid "_Close"
 msgstr ""
 
@@ -184,7 +184,7 @@ msgstr ""
 msgid "Archive Manager {version}"
 msgstr ""
 
-#: src/dialoge.rs:834
+#: src/dialoge.rs:840
 msgid ""
 "Classic archive manager for Querencia Desktop\n"
 "modelled on File Roller 2.30.\n"
@@ -192,15 +192,15 @@ msgid ""
 "Reads every format libarchive knows, writes zip, tar.gz and tar.xz."
 msgstr ""
 
-#: src/dialoge.rs:839
+#: src/dialoge.rs:845
 msgid "Alpha – not released for everyday use."
 msgstr ""
 
-#: src/dialoge.rs:852
+#: src/dialoge.rs:858
 msgid "License: GPL-3.0-or-later"
 msgstr ""
 
-#: src/dialoge.rs:854
+#: src/dialoge.rs:860
 msgid "Archive formats: libarchive (BSD)"
 msgstr ""
 

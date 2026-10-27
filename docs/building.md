@@ -48,12 +48,13 @@ bash werkzeug/bauen.sh release    # nur Release
 
 ## Übersetzungen
 
-Englisch steht im Code (msgid), Deutsch in `po/de.po`. Werkzeug ist
+Englisch steht im Code (msgid), Deutsch, Italienisch, Spanisch und
+Französisch in `po/de.po`, `po/it.po`, `po/es.po`, `po/fr.po`. Werkzeug ist
 `werkzeug/i18n.py` aus dem Editor (nur Python-Standardbibliothek):
 
 ```bash
 python3 werkzeug/i18n.py pot      # po/querencia-archiv.pot aus src/ und data/*.desktop.in
-python3 werkzeug/i18n.py update   # po/de.po nachziehen, dann übersetzen
+python3 werkzeug/i18n.py update   # po/*.po nachziehen, dann übersetzen
 python3 werkzeug/i18n.py desktop data/org.querencia.Archiv.desktop.in data/org.querencia.Archiv.desktop
 python3 werkzeug/i18n.py pruefen  # muss PASS melden
 python3 werkzeug/i18n.py mo <ziel>
@@ -87,7 +88,7 @@ zum SVG passt. Das Info-Fenster nimmt das Symbol unter eigenem Namen
 ## Paket (später)
 
 - `/usr/bin/querencia-archiv`
-- `/usr/share/locale/de/LC_MESSAGES/querencia-archiv.mo` (aus `po/de.po`
+- `/usr/share/locale/<lang>/LC_MESSAGES/querencia-archiv.mo` für de, es, fr, it (aus `po/<lang>.po`
   mit `msgfmt`; Build-Abhängigkeit `gettext`)
 - `/usr/share/applications/org.querencia.Archiv.desktop`
   (`data/org.querencia.Archiv.desktop`)

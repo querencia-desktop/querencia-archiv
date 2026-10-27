@@ -7,6 +7,24 @@ steht als „unfertig“ da.
 
 ## [Unveröffentlicht]
 
+## [0.1.3] – 2026-10-26
+
+### Neu
+- Italienisch, Spanisch, Französisch: Kataloge `po/it.po`, `po/es.po`,
+  `po/fr.po` (je 132 Texte, vollständig) für Menüs, Werkzeugleiste,
+  Ortsleiste, Spalten, Statusleiste, Dialoge (Entpacken, Neues Archiv,
+  Passwort, Ersetzen, Löschen, Fortschritt), Meldungen, Info-Dialog und
+  Desktop-Datei (`Name[it]=Gestore di archivi`, `Name[es]=Gestor de
+  archivadores`, `Name[fr]=Gestionnaire d’archives`); MetaInfo mit Name,
+  Zusammenfassung, Beschreibung und Schlüsselwörtern in diesen Sprachen.
+  Wortschatz File Roller je Sprache und die gemeinsame Querencia-Begriffstabelle;
+  Zugriffstasten je Menü und Dialog eindeutig, auch gegen die Ortsleiste.
+- „Online-Hilfe“ öffnet querencialinux.org/it|es|fr/docs/; Datum und
+  Dezimalzeichen landesüblich.
+
+### Unverändert
+- Deutsch, Englisch, Funktionen, Farben und Symbol wie 0.1.2.
+
 ## [0.1.2] – 2026-10-22
 
 ### Neu
