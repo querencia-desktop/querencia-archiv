@@ -9,8 +9,9 @@ Anleitung auf <https://querencialinux.org>.
 
 *English summary:* A classic archive manager modelled on File Roller 2.30 /
 Engrampa, reading every format libarchive knows and writing zip, tar.gz and
-tar.xz. Part of Querencia Desktop, a classic GNOME-2-style desktop for
-Wayland. Alpha software; documentation is in German.
+tar.xz. Part of Querencia Desktop, a classic GNOME-2-style desktop for Wayland.
+Alpha software; user interface in German, English, Italian, Spanish and French;
+documentation is in German.
 
 > **Alpha.** 7z und RAR nur lesen; verschlüsselte Archive nur lesen und
 > entpacken; kein Ziehen aus dem Fenster heraus. Keine Sicherheits- oder
